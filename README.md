@@ -10,6 +10,7 @@ Welcome to my portfolio! This repository showcases my projects of various topics
 
 3. [Scraping for DL model training - Steam](./TranslationCorpusScraping/): The objective of this project is to gather data by scraping in order to create a parallel corpus for training a deep learning translation model.
 
+4. [Tableau Story Viz - Bichette vs Jeter](./BichetteVsJeter/): This project was sparked by an article from https://www.thestar.com/sports/bluejays/opinion/2023/07/07/bo-bichette-vs-derek-jeter-we-ran-the-numbers-and-they-tell-a-surprising-story.html, which served as my inspiration to create the story as visualization in Tableau.
 
 ## Contact
 
