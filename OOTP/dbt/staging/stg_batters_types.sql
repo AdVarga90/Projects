@@ -133,4 +133,4 @@ SELECT
     TRY_CAST(ARM AS FLOAT) AS ARM,
     TRY_CAST(`BF%` AS FLOAT) AS `BF_perc`,
     TRY_CAST(file_name as VARCHAR(20)) as file_name 
-from default.batters_db where file_name > '2023-12-22'
+from {{ source('dbricks', 'batters_db') }} where file_name > '2023-12-22'

@@ -133,4 +133,4 @@ SELECT
     TRY_CAST(ZR AS FLOAT) AS ZR, 
     TRY_CAST(EFF AS FLOAT) AS EFF,
     TRY_CAST(file_name as VARCHAR(20)) as file_name 
-    from default.pitchers_db where file_name > '2023-12-22'
+    from {{ source('dbricks', 'pitchers_db') }} where file_name > '2023-12-22'

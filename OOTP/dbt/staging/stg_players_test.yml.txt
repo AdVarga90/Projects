@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_batters_types
+    columns: 
+      - name: Name
+        tests:
+          - not_null
+      - name: B
+        tests:
+          - accepted_values:
+              values:
+                - "R"
+                - "S"
+                - "L"
+
+  - name: stg_pitchers_types
+    columns:
+      - name: Name
+        tests:
+          - not_null
+      - name: T
+        tests:
+          - accepted_values:
+              values:
+                - "R"
+                - "L"

@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: dbricks
+    database: raw
+    schema: default
+    tables:
+      - name: batters_db
+        columns:
+          - name: Name
+            tests:
+              - not_null
+          - name: B
+            tests:
+              - accepted_values:
+                  values:
+                    - "R"
+                    - "L"
+                    - "S"
+      - name: pitchers_db
+        columns:
+          - name: Name
+            tests:
+              - not_null
+          - name: T
+            tests:
+              - accepted_values:
+                  values:
+                    - "R"
+                    - "L"
+        loaded_at_field: file_name
+        freshness:
+          warn_after: {count: 14, period: day}
+          error_after: {count: 90, period: day}
