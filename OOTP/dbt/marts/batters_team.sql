@@ -133,8 +133,7 @@ SUM(	 `BIZ_Zm`	*IP)/NULLIF(SUM(IP*IP),0)*1200 as 				 `BIZ_Zm`,
 SUM(	 `BIZ_I`	*IP)/NULLIF(SUM(IP*IP),0)*1200 as 				 `BIZ_I`,
 SUM(	 FRM	*IP)/NULLIF(SUM(IP*IP),0)*1200 as 				 FRM,
 SUM(	 ARM	*IP)/NULLIF(SUM(IP*IP),0)*1200 as 				 ARM,
-SUM(	 `BF_perc`	*IP)/NULLIF(SUM(IP*IP),0) as 				 `BF_perc`,
-	 file_name 			as 		 file_name 
+SUM(	 `BF_perc`	*IP)/NULLIF(SUM(IP*IP),0) as 				 `BF_perc`
 from {{ ref('stg_batters_types') }}
 group by
 	 POS,					

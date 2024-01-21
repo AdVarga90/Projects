@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_batters_types
+    description: Staged batter data with correct data types and adjusted column namings.
+    columns: 
+      - name: Name
+    	description: First name and surname of a player.
+        tests:
+          - not_null
+      - name: B
+        tests:
+          - accepted_values:
+              values:
+                - "Right"
+                - "Switch"
+                - "Left"
+
+  - name: stg_pitchers_types
+    description: Staged pitcher data with correct data types and adjusted column namings.
+    columns:
+      - name: Name
+    	description: First name and surname of a player.
+        tests:
+          - not_null
+      - name: T
+        tests:
+          - accepted_values:
+              values:
+                - "Right"
+                - "Left"

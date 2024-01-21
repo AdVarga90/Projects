@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: dbricks
-    database: raw
+    database: hive_metastore
     schema: default
     tables:
       - name: batters_db
@@ -14,9 +14,9 @@ sources:
             tests:
               - accepted_values:
                   values:
-                    - "R"
-                    - "L"
-                    - "S"
+                    - "Right"
+                    - "Left"
+                    - "Switch"
       - name: pitchers_db
         columns:
           - name: Name
@@ -26,8 +26,8 @@ sources:
             tests:
               - accepted_values:
                   values:
-                    - "R"
-                    - "L"
+                    - "Right"
+                    - "Left"
         loaded_at_field: file_name
         freshness:
           warn_after: {count: 14, period: day}

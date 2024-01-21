@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: batters_team
+    description: Batters mart with aggregation on name and team. (practically grouped by every dimension)
+    columns: 
+      - name: Name
+        description: First name and surname of a player.
+        tests:
+          - not_null
+      - name: BBT
+        description: '{{ doc("BBT") }}'
+        tests:
+          - accepted_values:
+              values:
+                - "Line Drive"
+                - "Flyball"
+                - "Groundball"
+                - "Normal"
+      - name: GBT
+        description: '{{ doc("GBT") }}'
+      - name: FBT
+        description: '{{ doc("FBT") }}'
+
+  - name: pitchers_team
+    description: Pitchers mart with aggregation on name and team. (practically grouped by every dimension)
+    columns:
+      - name: Name
+        description: First name and surname of a player.
+        tests:
+          - not_null
+      - name: T
+        tests:
+          - accepted_values:
+              values:
+                - "Right"
+                - "Left"
